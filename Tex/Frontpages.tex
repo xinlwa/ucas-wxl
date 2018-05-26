@@ -1,0 +1,70 @@
+%---------------------------------------------------------------------------%
+%->> 封面信息及生成
+%---------------------------------------------------------------------------%
+%-
+%-> 中文封面信息
+%-
+\confidential{}% 密级：只有涉密论文才填写
+\schoollogo{scale=0.095}{ucas_logo}% 校徽
+\title{主题标签流行度预测方法与应用技术研究}% 论文中文题目
+\author{王新乐}% 论文作者
+\advisor{廖华明~副研究员}% 指导教师：姓名 专业技术职务 工作单位
+\advisorsec{中国科学院计算技术研究所}% 第二指导老师：按情况填写
+\degree{硕士}% 学位：学士、硕士、博士
+\degreetype{工学}% 学位类别：理学、工学、工程、医学等
+\major{计算机应用技术}% 二级学科专业名称
+\institute{中国科学院计算技术研究所}% 院系名称
+\chinesedate{2018年~~6月}% 毕业日期：夏季为6月、冬季为12月
+%-
+%-> 英文封面信息
+%-
+\englishtitle{Research on Topic Tag Popularity Prediction Method \\and Application Technology}% 论文英文题目
+\englishauthor{Xinle Wang}% 论文作者
+\englishadvisor{Supervisor: Associate Professor Huaming Liao}% 指导教师
+\englishdegree{Master}% 学位：Bachelor, Master, Doctor。封面格式将根据英文学位名称自动切换，请确保拼写准确无误
+\englishdegreetype{Science in Engineering}% 学位类别：Philosophy, Natural Science, Engineering, Economics, Agriculture 等
+\englishthesistype{thesis}% 论文类型： thesis, dissertation
+\englishmajor{Technology of Computer Application}% 二级学科专业名称
+\englishinstitute{Institute of Computing Technology\\Chinese Academy of Sciences}% 院系名称
+\englishdate{June, 2018}% 毕业日期：夏季为June、冬季为December
+%-
+%-> 生成封面
+%-
+\maketitle% 生成中文封面
+\makeenglishtitle% 生成英文封面
+%-
+%-> 作者声明
+%-
+\makedeclaration% 生成声明页
+%-
+%-> 中文摘要
+%-
+\chapter*{摘\quad 要}\chaptermark{摘\quad 要}% 摘要标题
+\setcounter{page}{1}% 开始页码
+\pagenumbering{Roman}% 页码符号
+
+随着技术的不断发展，互联网上涌现出了许多社交媒体，比如微博，Twitter 等社交网站，越来越多的人参与其中，获取实时的在线信息。微博作为一个大众 的社交工具，人们在上面不断发布消息，获取热门话题。微博上的主题标签作为 一个用户自发打下的标签，表达了用户真实想法，对于捕捉用户兴趣和关注有 极大作用。但是目前对于主题标签流行度预测的研究还是比较少，大部分都是 基于微博消息的研究，同时主题标签的流行度反映了当下的社会群体的关注点， 表述了网民对于事件的关注程度，本文从微博的实际场景出发，根据主题标签的 自身特性进行相关研究，构建主题标签的流行度预测模型，关注其未来趋势，对 于发现热门话题十分重要。
+
+一方面，现有基于特征的主题标签流行度预测算法没有考虑用户粉丝之间 的网络结构信息以及主题标签自身的特性。鉴于此，本文对用户网络结构信息和 主题标签的情感性，地域性等信息进行特征分析，提出了一种考虑用户粉丝网络 结构特征以及主题标签自身特性的流行度预测模型。实验证明，新提出的特征是 有效的，对以后主题标签的流行度预测具有较高的参考价值。
+
+另一方面，传统的消息预测模型是单源问题，每一个消息都是由一个个体发 出然后进行转发传播。但是相同的主题标签可以由不同的个体从不同的时刻发 出，为了处理多源主题标签流行度预测问题，本文提出了一种基于微观角度的主 题标签流行度预测算法，首先构建每个源头的主题标签传播机制，然后使用注意 力机制刻画每个源头的重要性，从而得到全局的表达。实验证明该模型的有效 性，同时为以后多源问题的解决提供了思路。
+
+最后，依据基于特征的主题标签流行度预测算法，本文设计并实现了一个 事件热度预测系统，包含微博数据采集、任务下发和事件流行度预测等模块。该 系统能够自动发现事件，尤其是可以根据事件的流行度来评估网民关注的话题， 在网络舆情分析等领域具有较高的应用价值。
+
+\keywords{微博，流行度预测，多源，主题标签}% 中文关键词
+%-
+%-> 英文摘要
+%-
+\chapter*{Abstract}\chaptermark{Abstract}% 摘要标题
+
+With the continuous development of technology, many social media have emerged on the Internet, such as Weibo, Twitter and other social networking sites, and more and more people are participating in it to obtain real-time online information. As a popular social tool, Weibo continues to publish news on top and get hot topics. The theme tag on Weibo serves as a label that the user spontaneously lays down and expresses the user's real idea, which is of great importance for capturing user interest and attention.However,at present, there are relatively few studies on the prediction of topical tag popularity.Most of them are based on the research of microblog messages. At the same time, the popularity of topic tags reflects the concerns of the current social groups and expresses the concern of Internet users about events. This article starts from the actual scene of Weibo, then conducts relevant research according to the characteristics of the topic tag, builds a popularity forecasting model of the topic tag, and pays attention to its future trend, which is very important for finding hot topics.
+
+On the one hand,the existing feature-based topic tag popularity prediction algorithm does not consider the network structure information between the user's fans and the characteristics of the subject tag itself.Therefore this paper analyzes the characteristics of user network structure information and topic tags such as sentiment and regionality, and proposes a popularity prediction model that considers the user's fan network structure characteristics and the subject tag's own characteristics. Experiments have proved that the newly proposed feature is effective and has a high reference value for predicting the popularity of future topic tags.
+
+On the other hand, the traditional message prediction model is a single-source problem. Each message is sent by one individual and then forwarded. However, the same subject tag can be issued by different individuals from different moments. In order to deal with the popularity prediction of multi-source topic tags, this article proposes a topic-based tag popularity prediction algorithm based on the micro perspective, by first constructing the theme of each source with label propagation mechanism and then use attention to describe the importance of each source, so as to get a global expression. Experiments have proved the validity of the model, and at the same time provide ideas for the solution of multi-source problems.
+
+Finally, according to the feature-based topic tag popularity forecasting algorithm,
+this paper designs and implements an event hotspot forecasting system, including microblogging data acquisition, task delivery and event popularity forecasting modules. The system can automatically discover events, especially the topic of Internet users can be evaluated according to the popularity of the event, and has a high application value in the field of network public opinion analysis and other fields.
+
+\englishkeywords{Weibo,Popularity Prediction,Multi Source,Topic Tag}% 英文关键词
+%---------------------------------------------------------------------------%
